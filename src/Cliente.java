@@ -1,9 +1,12 @@
+import java.util.Scanner;
+
 public class Cliente {
 
     private String nome;
+    Scanner leitor = new Scanner(System.in);
 
     public Cliente() {
-        this.nome = nome;
+        nome = leitor.next();
     }
 
     public String getNome() {

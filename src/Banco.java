@@ -1,8 +1,7 @@
-import java.util.List;
+import java.util.ArrayList;
 
 public class Banco {
 
     private String nome;
-    private List<Conta> contas;
-
+    public ArrayList<Conta> contas = new ArrayList<>();
 }

@@ -1,7 +1,7 @@
 public interface InterfaceConta {
 
-    void sacar(double valor);
-    void depositar(double valor);
-    void transferir(double valor, Conta contaDestino);
+    void sacar(double valor, Conta contaAlvo);
+    void depositar(double valor, Conta contaAlvo);
+    void transferir(double valor, Conta contaFonte, Conta contaDestino);
     void imprimirExtrato();
 }

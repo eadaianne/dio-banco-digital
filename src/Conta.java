@@ -15,19 +15,19 @@ public abstract class Conta implements InterfaceConta {
     }
 
     @Override
-    public void sacar(double valor) {
-        saldo -= valor;
+    public void sacar(double valor, Conta contaAlvo) {
+        contaAlvo.saldo -= valor;
     }
 
     @Override
-    public void depositar(double valor) {
-        saldo += valor;
+    public void depositar(double valor, Conta contaAlvo) {
+        contaAlvo.saldo += valor;
     }
 
     @Override
-    public void transferir(double valor, Conta contaDestino) {
-        this.sacar(valor);
-        contaDestino.depositar(valor);
+    public void transferir(double valor, Conta contaFonte, Conta contaDestino) {
+        contaFonte.sacar(valor, contaFonte);
+        contaDestino.depositar(valor, contaDestino);
     }
 
     @Override

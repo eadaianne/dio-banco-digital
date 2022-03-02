@@ -5,7 +5,6 @@ public class ContaPoupanca extends Conta {
         super.identificador = "P";
     }
 
-
     @Override
     public void imprimirExtrato() {
         System.out.println("=== EXTRATO CONTA POUPANÇA ===");

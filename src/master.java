@@ -75,7 +75,11 @@ public class master {
                     cf.imprimirExtrato();
                     i = leitor.nextInt();
                 }
-                default -> System.out.println("Informe um número válido");
+                default -> {
+                    System.out.println("Informe um número válido.");
+
+                    i = leitor.nextInt();
+                }
             }
         }
     }
